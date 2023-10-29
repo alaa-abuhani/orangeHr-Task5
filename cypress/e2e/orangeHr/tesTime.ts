@@ -1,5 +1,4 @@
 import login from "../../support/PageObject/login";
-import vacancy from "../../support/PageObject/vacancy";
 import employee from "../../support/API/addEmpAPI/addEmpAPI";
 import GenericHepler from "../../support/helpers/genericFunctions";
 import Time from "../../support/API/addTimeUser";
