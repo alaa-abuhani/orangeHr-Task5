@@ -40,11 +40,13 @@ describe("vacancy functionality ", () => {
 
   it("vacancy: add attachment text file", () => {
     cy.get("@EmpInfo").then((EmpInfo: any) => {
+      //user login
       loginObj.loginValid(EmpInfo.user.firstName, EmpInfo.user.password);
       timePageObj.timeTab();
+      //user add timesheet
       Time.AddTimeSheet();
     });
-    // //admin login
+    //admin login
     cy.get("@logininfo").then((logininfo: any) => {
       loginObj.loginValid(logininfo[0].Username, logininfo[0].Password);
       timePageObj.timeView();
