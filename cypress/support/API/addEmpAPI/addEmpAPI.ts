@@ -1,3 +1,4 @@
+let empNumber: number;
 export default class employee {
   addEmloyeeViaAPI(
     firstName: string,
@@ -21,7 +22,8 @@ export default class employee {
       })
       .then((response) => {
         expect(response).property("status").to.equal(200);
-        const empNumber = response.body.data.empNumber;
+        console.log(response);
+        empNumber = response.body.data.empNumber;
         cy.request({
           method: "POST",
           url: "/api/v2/admin/users",
@@ -35,12 +37,14 @@ export default class employee {
         });
       });
   }
-  deleteEmployee(id: number) {
-    cy.request({
+  
+  deleteEmployee(empNumbe: number) {
+    cy.api({
+      // delete the created employee
       method: "DELETE",
-      url: "/web/index.php/api/v2/pim/employees",
+      url: "/api/v2/pim/employees",
       body: {
-        ids: [id],
+        ids: [empNumbe],
       },
     }).then((response) => {
       expect(response).property("status").to.equal(200);

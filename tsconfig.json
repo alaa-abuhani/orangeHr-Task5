@@ -107,5 +107,5 @@
     "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   }
   ,
-  "include": ["**/*.ts", "cypress.config.js"]
+  "include": ["**/*.ts", "cypress.config.ts"]
 }
