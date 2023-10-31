@@ -6,4 +6,7 @@ export default class timePage {
   timeView(){
     cy.visit("/time/viewEmployeeTimesheet");
   }
+  timeAssertion(name:string){
+    cy.get(".oxd-table").should("contain", name);
+  }
 }
