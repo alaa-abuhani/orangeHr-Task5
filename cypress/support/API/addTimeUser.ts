@@ -15,15 +15,16 @@ export default class Time {
         body: {
           entries: [
             {
-              projectId: 6,
-              activityId: 42,
+              projectId: 2,
+              activityId: 11,
               dates: {
-                "2023-10-23": {
-                  duration: "22:00",
+                "2023-11-01": {
+                  duration: "04:00",
                 },
               },
             },
           ],
+
           deletedEntries: [],
         },
       }).then((reponse) => {

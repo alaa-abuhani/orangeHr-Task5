@@ -1,6 +1,5 @@
 import login from "../../support/PageObject/login";
 import employee from "../../support/API/addEmpAPI/addEmpAPI";
-import GenericHepler from "../../support/helpers/genericFunctions";
 import Time from "../../support/API/addTimeUser";
 import timePage from "../../support/PageObject/timePage";
 const timePageObj: timePage = new timePage();
@@ -59,19 +58,3 @@ describe("time functionality ", () => {
     });
   });
 });
-
-// checkDataInTable('.oxd-table', [`${  EmpInfo.user.firstName} ${  EmpInfo.user.middleName} ${EmpInfo.user.lastName}`]);
-// cy.get(".oxd-autocomplete-text-input > input").type(
-//   `${EmpInfo.user.firstName} `,
-//   { force: true }
-// );
-// cy.api({
-
-//   method: "DELETE",
-//   url: "/api/v2/pim/employees",
-//   body: {
-//     ids: [empNumber],
-//   },
-// }).then((response) => {
-//   expect(response).property("status").to.equal(200);
-// });

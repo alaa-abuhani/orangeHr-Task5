@@ -37,9 +37,9 @@ export default class employee {
         });
       });
   }
-  
+
   deleteEmployee(empNumbe: number) {
-    cy.api({
+    cy.request({
       // delete the created employee
       method: "DELETE",
       url: "/api/v2/pim/employees",
